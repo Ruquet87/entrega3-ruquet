@@ -1,3 +1,11 @@
+/* VARIABLES */
+
+$color-fondo: #161411;
+$color-titulo: antiquewhite;
+$color-border: rgb(77, 23, 23);
+$color-texto: rgb(123, 170, 155);
+$color-footer: rgb(39, 38, 36);
+
 /* RESET */
 * {
   margin: 0;
@@ -15,7 +23,7 @@
 /* BODY */
 
 body {
-  background-color: #161411;
+  background-color: $color-fondo;
   font-family: "Raleway", sans-serif;
 }
 
@@ -27,16 +35,15 @@ header {
   background-image: url(../images/cuerdas-guitarra-980x478.png);
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 3px rgb(77, 23, 23) solid;
+  border-bottom: 3px $color-border solid;
   position: fixed;
   z-index: 1000;
   width: 100%;
 }
 
-/* FOOTER */
-
+/* FOOTER NESTING */
 footer {
-  background-color: rgb(39, 38, 36);
+  background-color: $color-footer;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -46,63 +53,65 @@ footer {
     "copyright copyright copyright";
   gap: 1rem;
   align-items: center;
-  color: antiquewhite;
-  border-top: 3px rgb(77, 23, 23) solid;
-}
+  color: $color-titulo;
+  border-top: 3px $color-border solid;
 
-.logo-footer {
-  grid-area: logo;
-  width: 100px;
-  border-radius: 100px;
-  border: 2px #161411 solid;
-  justify-self: center;
-}
+  .logo-footer {
+    grid-area: logo;
+    width: 100px;
+    border-radius: 100px;
+    border: 2px #161411 solid;
+    justify-self: center;
+  }
 
-#maps {
-  grid-area: mapa;
-  width: 75%;
-  height: 150px;
-  border-radius: 10px;
-}
+  #maps {
+    grid-area: mapa;
+    width: 75%;
+    height: 150px;
+    border-radius: 10px;
+  }
 
-.info-footer {
-  grid-area: info;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
+  .info-footer {
+    grid-area: info;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
-.info-footer h2 {
-  font-size: 18px;
-  margin-bottom: 0.5rem;
-}
+    h2 {
+      font-size: 18px;
+      margin-bottom: 0.5rem;
+    }
 
-.redes-footer ul,
-.contacto-footer ul {
-  list-style: none;
-  padding: 0;
-}
+    .redes-footer,
+    .contacto-footer {
+      ul {
+        list-style: none;
+        padding: 0;
+      }
 
-.redes-footer a,
-.contacto-footer li {
-  font-size: 16px;
-  color: antiquewhite;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+      a,
+      li {
+        font-size: 16px;
+        color: antiquewhite;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
 
-.ti {
-  font-size: 1.5rem;
-  color: rgb(228, 163, 66);
-}
+  .ti {
+    font-size: 1.5rem;
+    color: rgb(228, 163, 66);
+  }
 
-.copyright {
-  grid-area: copyright;
-  font-size: 0.8rem;
-  justify-self: center;
-  margin-top: 1rem;
+  .copyright {
+    grid-area: copyright;
+    font-size: 0.8rem;
+    justify-self: center;
+    margin-top: 1rem;
+  }
 }
 
 /* MAIN */
@@ -114,232 +123,219 @@ main {
 
 /*PAGES */
 
-/* INDEX */
-
+/* INDEX NESTING */
 .presentacion {
   padding: 3rem;
-}
 
-.contenido {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+  h1 {
+    color: $color-titulo;
+    font-family: "FuenteTitulo";
+    font-size: 45px;
+  }
 
-.container-texto {
-  flex: 1;
-  min-width: 300px;
-}
+  p {
+    color: $color-texto;
+    padding: 1.5rem;
+    font-size: 25px;
+  }
 
-.container-video {
-  flex: 1;
-  aspect-ratio: 16 / 9;
-  min-width: 300px;
-  height: 100%;
-}
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 
-.video-presentacion {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
-}
+    .container-texto {
+      flex: 1;
+      min-width: 300px;
+    }
 
-h1 {
-  color: antiquewhite;
-  font-family: "FuenteTitulo";
-  font-size: 45px;
-}
+    .container-video {
+      flex: 1;
+      aspect-ratio: 16 / 9;
+      min-width: 300px;
+      height: 100%;
 
-.presentacion p {
-  color: rgb(123, 170, 155);
-  padding: 1.5rem;
-  font-size: 25px;
+      .video-presentacion {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 8px;
+      }
+    }
+  }
 }
-
-/*SOBRE MI*/
+/* SOBRE MI NESTING */
 
 .info-sobre-mi {
   display: flex;
   padding: 3rem;
   flex-wrap: wrap;
+
+  .sobre-mi {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    h1 {
+      font-family: "FuenteTitulo";
+      color: $color-titulo;
+    }
+
+    p {
+      color: $color-texto;
+      padding: 1.5rem;
+      font-size: 22px;
+    }
+
+    .formacion {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      margin: 50px;
+      gap: 1rem;
+
+      h2 {
+        font-family: "FuenteTitulo";
+        color: $color-titulo;
+        text-decoration: underline;
+      }
+
+      .estudios,
+      .aprendizaje {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: #26221c;
+        padding: 1rem;
+        border-radius: 10px;
+        color: $color-titulo;
+        text-align: left;
+
+        p {
+          margin-right: 80px;
+        }
+      }
+    }
+  }
+
+  .imagen-sobre-mi {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-self: center;
+    height: 700px;
+    padding: 1rem;
+
+    img {
+      border-radius: 2rem;
+    }
+  }
 }
 
-.sobre-mi {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+/*PRODUCTOS NESTING */
+#productos {
+  .titulos-productos {
+    margin: 3rem;
+  }
+
+  h1 {
+    color: $color-titulo;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    color: $color-texto;
+  }
+
+  .grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+
+    .producto {
+      background-color: #26221c;
+      padding: 1rem;
+      border-radius: 10px;
+      color: $color-titulo;
+      text-align: left;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $color-texto;
+      }
+    }
+  }
 }
 
-.sobre-mi p {
-  color: rgb(123, 170, 155);
-  padding: 1.5rem;
-  font-size: 22px;
-}
-
-.formacion {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  margin: 50px;
-  gap: 1rem;
-}
-
-.estudios {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #26221c;
-  padding: 1rem;
-  border-radius: 10px;
-  color: antiquewhite;
-  text-align: left;
-}
-
-.estudios p {
-  margin-right: 80px;
-}
-
-.aprendizaje {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #26221c;
-  padding: 1rem;
-  border-radius: 10px;
-  color: antiquewhite;
-  text-align: left;
-}
-
-.aprendizaje p {
-  margin-right: 80px;
-}
-
-.formacion h2 {
-  font-family: "FuenteTitulo";
-  color: rgb(243, 225, 202);
-  text-decoration: underline;
-}
-
-.imagen-sobre-mi {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-self: center;
-  height: 700px;
-  padding: 1rem;
-}
-
-.imagen-sobre-mi img {
-  border-radius: 2rem;
-}
-
-/*PRODUCTOS*/
-
-titulos-productos {
-  margin: 3rem;
-}
-
-#productos h1 {
-  color: antiquewhite;
-  margin-bottom: 1rem;
-}
-
-#productos h2 {
-  color: rgb(123, 170, 155);
-}
-
-.grilla-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.producto {
-  background-color: #26221c;
-  padding: 1rem;
-  border-radius: 10px;
-  color: antiquewhite;
-  text-align: left;
-}
-
-.producto img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.producto h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.producto p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: rgb(123, 170, 155);
-}
-______________________________________________________________________
-Pagina Servicios
-
-/*SERVICIOS*/
+/* SERVICIOS NESTING */
 
 /*MAIN*/
-
 #servicios {
   padding: 3rem;
-}
 
-#servicios h1 {
-  margin-bottom: 0.5rem;
-}
+  h1 {
+    margin-bottom: 0.5rem;
+    color: $color-titulo;
+  }
 
-#servicios h2 {
-  color: rgb(123, 170, 155);
-  font-size: 1.5rem;
-  margin-left: 1rem;
-}
+  h2 {
+    color: $color-texto;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
 
-.grilla-servicios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
+  .grilla-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
 
-.servicio {
-  background-color: #26221c;
-  padding: 1rem;
-  border-radius: 10px;
-  color: antiquewhite;
-  text-align: left;
-}
+    .servicio {
+      background-color: #26221c;
+      padding: 1rem;
+      border-radius: 10px;
+      color: $color-titulo;
+      text-align: left;
 
-.servicio img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
 
-.servicio h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: antiquewhite;
-}
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: $color-titulo;
+      }
 
-.servicio p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
-  color: rgb(123, 170, 155);
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        color: $color-texto;
+      }
+    }
+  }
 }
-
-/* CONTACTO */
+/* CONTACTO NESTING */
 
 #main-contacto {
   display: flex;
@@ -347,7 +343,7 @@ Pagina Servicios
 }
 
 .info-contacto p {
-  color: rgb(123, 170, 155);
+  color: $color-texto;
   padding: 1rem;
 }
 
@@ -363,6 +359,7 @@ Pagina Servicios
 .info-contacto h1 {
   font-size: 45px;
   margin-bottom: 80px;
+  color: $color-titulo;
 }
 
 .nombre-contacto {
@@ -386,7 +383,7 @@ Pagina Servicios
 
 form {
   display: grid;
-  color: rgb(123, 170, 155);
+  color: $color-titulo;
   margin: 1rem;
   padding: 1rem;
   gap: 2rem;

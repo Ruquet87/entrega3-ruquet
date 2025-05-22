@@ -1,3 +1,4 @@
+/* VARIABLES */
 /* RESET */
 * {
   margin: 0;
@@ -28,7 +29,7 @@ header {
   width: 100%;
 }
 
-/* FOOTER */
+/* FOOTER NESTING */
 footer {
   background-color: rgb(39, 38, 36);
   padding: 1rem;
@@ -41,42 +42,38 @@ footer {
   color: antiquewhite;
   border-top: 3px rgb(77, 23, 23) solid;
 }
-
-.logo-footer {
+footer .logo-footer {
   grid-area: logo;
   width: 100px;
   border-radius: 100px;
   border: 2px #161411 solid;
   justify-self: center;
 }
-
-#maps {
+footer #maps {
   grid-area: mapa;
   width: 75%;
   height: 150px;
   border-radius: 10px;
 }
-
-.info-footer {
+footer .info-footer {
   grid-area: info;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
-.info-footer h2 {
+footer .info-footer h2 {
   font-size: 18px;
   margin-bottom: 0.5rem;
 }
-
-.redes-footer ul,
-.contacto-footer ul {
+footer .info-footer .redes-footer ul,
+footer .info-footer .contacto-footer ul {
   list-style: none;
   padding: 0;
 }
-
-.redes-footer a,
-.contacto-footer li {
+footer .info-footer .redes-footer a,
+footer .info-footer .redes-footer li,
+footer .info-footer .contacto-footer a,
+footer .info-footer .contacto-footer li {
   font-size: 16px;
   color: antiquewhite;
   text-decoration: none;
@@ -84,13 +81,11 @@ footer {
   align-items: center;
   gap: 8px;
 }
-
-.ti {
+footer .ti {
   font-size: 1.5rem;
   color: rgb(228, 163, 66);
 }
-
-.copyright {
+footer .copyright {
   grid-area: copyright;
   font-size: 0.8rem;
   justify-self: center;
@@ -104,114 +99,92 @@ main {
 }
 
 /*PAGES */
-/* INDEX */
+/* INDEX NESTING */
 .presentacion {
   padding: 3rem;
 }
-
-.contenido {
+.presentacion h1 {
+  color: antiquewhite;
+  font-family: "FuenteTitulo";
+  font-size: 45px;
+}
+.presentacion p {
+  color: rgb(123, 170, 155);
+  padding: 1.5rem;
+  font-size: 25px;
+}
+.presentacion .contenido {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-
-.container-texto {
+.presentacion .contenido .container-texto {
   flex: 1;
   min-width: 300px;
 }
-
-.container-video {
+.presentacion .contenido .container-video {
   flex: 1;
   aspect-ratio: 16/9;
   min-width: 300px;
   height: 100%;
 }
-
-.video-presentacion {
+.presentacion .contenido .container-video .video-presentacion {
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 8px;
 }
 
-h1 {
-  color: antiquewhite;
-  font-family: "FuenteTitulo";
-  font-size: 45px;
-}
-
-.presentacion p {
-  color: rgb(123, 170, 155);
-  padding: 1.5rem;
-  font-size: 25px;
-}
-
-/*SOBRE MI*/
+/* SOBRE MI NESTING */
 .info-sobre-mi {
   display: flex;
   padding: 3rem;
   flex-wrap: wrap;
 }
-
-.sobre-mi {
+.info-sobre-mi .sobre-mi {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
-
-.sobre-mi p {
+.info-sobre-mi .sobre-mi h1 {
+  font-family: "FuenteTitulo";
+  color: antiquewhite;
+}
+.info-sobre-mi .sobre-mi p {
   color: rgb(123, 170, 155);
   padding: 1.5rem;
   font-size: 22px;
 }
-
-.formacion {
+.info-sobre-mi .sobre-mi .formacion {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
   margin: 50px;
   gap: 1rem;
 }
-
-.estudios {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #26221c;
-  padding: 1rem;
-  border-radius: 10px;
-  color: antiquewhite;
-  text-align: left;
-}
-
-.estudios p {
-  margin-right: 80px;
-}
-
-.aprendizaje {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #26221c;
-  padding: 1rem;
-  border-radius: 10px;
-  color: antiquewhite;
-  text-align: left;
-}
-
-.aprendizaje p {
-  margin-right: 80px;
-}
-
-.formacion h2 {
+.info-sobre-mi .sobre-mi .formacion h2 {
   font-family: "FuenteTitulo";
-  color: rgb(243, 225, 202);
+  color: antiquewhite;
   text-decoration: underline;
 }
-
-.imagen-sobre-mi {
+.info-sobre-mi .sobre-mi .formacion .estudios,
+.info-sobre-mi .sobre-mi .formacion .aprendizaje {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #26221c;
+  padding: 1rem;
+  border-radius: 10px;
+  color: antiquewhite;
+  text-align: left;
+}
+.info-sobre-mi .sobre-mi .formacion .estudios p,
+.info-sobre-mi .sobre-mi .formacion .aprendizaje p {
+  margin-right: 80px;
+}
+.info-sobre-mi .imagen-sobre-mi {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -219,108 +192,96 @@ h1 {
   height: 700px;
   padding: 1rem;
 }
-
-.imagen-sobre-mi img {
+.info-sobre-mi .imagen-sobre-mi img {
   border-radius: 2rem;
 }
 
-/*PRODUCTOS*/
-titulos-productos {
+/*PRODUCTOS NESTING */
+#productos .titulos-productos {
   margin: 3rem;
 }
-
 #productos h1 {
   color: antiquewhite;
   margin-bottom: 1rem;
 }
-
 #productos h2 {
   color: rgb(123, 170, 155);
 }
-
-.grilla-productos {
+#productos .grilla-productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
 }
-
-.producto {
+#productos .grilla-productos .producto {
   background-color: #26221c;
   padding: 1rem;
   border-radius: 10px;
   color: antiquewhite;
   text-align: left;
 }
-
-.producto img {
+#productos .grilla-productos .producto img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
-
-.producto h3 {
+#productos .grilla-productos .producto h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-
-.producto p {
+#productos .grilla-productos .producto p {
   font-size: 1rem;
   line-height: 1.5;
   color: rgb(123, 170, 155);
 }
 
-______________________________________________________________________ Pagina Servicios #servicios {
+/* SERVICIOS NESTING */
+/*MAIN*/
+#servicios {
   padding: 3rem;
 }
-
 #servicios h1 {
   margin-bottom: 0.5rem;
+  color: antiquewhite;
 }
-
 #servicios h2 {
   color: rgb(123, 170, 155);
   font-size: 1.5rem;
   margin-left: 1rem;
 }
-
-.grilla-servicios {
+#servicios .grilla-servicios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
 }
-
-.servicio {
+#servicios .grilla-servicios .servicio {
   background-color: #26221c;
   padding: 1rem;
   border-radius: 10px;
   color: antiquewhite;
   text-align: left;
 }
-
-.servicio img {
+#servicios .grilla-servicios .servicio img {
   width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
-
-.servicio h2 {
+#servicios .grilla-servicios .servicio h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: antiquewhite;
 }
-
-.servicio p {
+#servicios .grilla-servicios .servicio p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
   color: rgb(123, 170, 155);
 }
 
-/* CONTACTO */
+/* CONTACTO NESTING */
 #main-contacto {
   display: flex;
   justify-content: space-around;
@@ -344,6 +305,7 @@ ______________________________________________________________________ Pagina Se
 .info-contacto h1 {
   font-size: 45px;
   margin-bottom: 80px;
+  color: antiquewhite;
 }
 
 .nombre-contacto {
@@ -367,7 +329,7 @@ ______________________________________________________________________ Pagina Se
 
 form {
   display: grid;
-  color: rgb(123, 170, 155);
+  color: antiquewhite;
   margin: 1rem;
   padding: 1rem;
   gap: 2rem;
