@@ -18,6 +18,19 @@ $color-footer: rgb(39, 38, 36);
   transition: border-color 0.3s;
 }
 
+/* EXTEND */
+
+.btn-base {
+  background-color: rgb(228, 163, 66);
+  color: #161411;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -402,14 +415,7 @@ form {
 }
 
 form button {
-  background-color: rgb(228, 163, 66);
-  color: #161411;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  @extend .btn-base;
 }
 
 form button:hover {
