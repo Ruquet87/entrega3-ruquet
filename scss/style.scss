@@ -6,6 +6,18 @@ $color-border: rgb(77, 23, 23);
 $color-texto: rgb(123, 170, 155);
 $color-footer: rgb(39, 38, 36);
 
+/* MIXINS */
+
+@mixin estilo-inputs {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -417,13 +429,7 @@ form button:hover {
 
 input,
 textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: sans-serif;
-  font-size: 1rem;
-  transition: border-color 0.3s;
+  @include estilo-inputs;
 }
 
 input:focus,
