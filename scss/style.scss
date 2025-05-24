@@ -100,7 +100,6 @@ footer {
     grid-area: info;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 
     h2 {
       font-size: 18px;
@@ -143,6 +142,7 @@ footer {
 
 main {
   min-height: 100vh;
+  max-width: 100vw;
   padding-top: 150px;
 }
 
@@ -463,3 +463,54 @@ textarea:focus {
 }
 
 /* FOOTER */
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "info"
+      "mapa"
+      "copyright";
+    text-align: center;
+
+    .info-footer {
+      flex-direction: column;
+      align-items: center;
+
+      .redes-footer,
+      .contacto-footer {
+        margin-bottom: 1rem;
+      }
+
+      a,
+      li {
+        justify-content: center;
+      }
+    }
+
+    #maps {
+      width: 100%;
+      height: 200px;
+    }
+
+    .logo-footer {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  footer {
+    font-size: 14px;
+
+    .info-footer h2 {
+      font-size: 16px;
+    }
+
+    #maps {
+      height: 10rem;
+      width: 17rem;
+    }
+  }
+}
