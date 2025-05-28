@@ -453,5 +453,31 @@ textarea:focus {
     min-width: unset;
   }
 }
+/* SOBRE MI */
+@media (max-width: 991px) {
+  .info-sobre-mi {
+    flex-direction: column;
+  }
+  .info-sobre-mi .sobre-mi {
+    text-align: center;
+  }
+  .info-sobre-mi .sobre-mi h1 {
+    font-size: 30px;
+  }
+  .info-sobre-mi .sobre-mi p {
+    font-size: 18px;
+  }
+  .info-sobre-mi .sobre-mi .formacion {
+    flex-direction: column;
+  }
+  .info-sobre-mi .sobre-mi .formacion .estudios,
+  .info-sobre-mi .sobre-mi .formacion .aprendizaje {
+    margin-bottom: 1rem;
+  }
+  .info-sobre-mi .imagen-sobre-mi img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

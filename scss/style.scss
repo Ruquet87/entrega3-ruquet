@@ -540,3 +540,37 @@ textarea:focus {
     }
   }
 }
+
+/* SOBRE MI */
+
+@media (max-width: 991px) {
+  .info-sobre-mi {
+    flex-direction: column;
+
+    .sobre-mi {
+      text-align: center;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .formacion {
+        flex-direction: column;
+
+        .estudios,
+        .aprendizaje {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .imagen-sobre-mi img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
