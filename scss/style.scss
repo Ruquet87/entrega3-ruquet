@@ -514,3 +514,27 @@ textarea:focus {
     }
   }
 }
+
+/* INDEX */
+@media (max-width: 991px) {
+  .presentacion {
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .contenido {
+      flex-direction: column;
+      align-items: center;
+
+      .container-texto,
+      .container-video {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  }
+}

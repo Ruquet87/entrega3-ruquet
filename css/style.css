@@ -434,5 +434,23 @@ textarea:focus {
     width: 17rem;
   }
 }
+/* INDEX */
+@media (max-width: 991px) {
+  .presentacion h1 {
+    font-size: 30px;
+  }
+  .presentacion p {
+    font-size: 18px;
+  }
+  .presentacion .contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+  .presentacion .contenido .container-texto,
+  .presentacion .contenido .container-video {
+    width: 100%;
+    min-width: unset;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
