@@ -458,11 +458,9 @@ textarea:focus {
   .info-sobre-mi {
     flex-direction: column;
   }
-  .info-sobre-mi .sobre-mi {
-    text-align: center;
-  }
   .info-sobre-mi .sobre-mi h1 {
     font-size: 30px;
+    justify-self: start;
   }
   .info-sobre-mi .sobre-mi p {
     font-size: 18px;

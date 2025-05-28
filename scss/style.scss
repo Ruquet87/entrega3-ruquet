@@ -548,10 +548,9 @@ textarea:focus {
     flex-direction: column;
 
     .sobre-mi {
-      text-align: center;
-
       h1 {
         font-size: 30px;
+        justify-self: start;
       }
 
       p {
