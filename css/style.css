@@ -154,7 +154,6 @@ main {
 .info-sobre-mi {
   display: flex;
   padding: 3rem;
-  flex-wrap: wrap;
 }
 .info-sobre-mi .sobre-mi {
   display: flex;
@@ -167,14 +166,13 @@ main {
 }
 .info-sobre-mi .sobre-mi p {
   color: rgb(123, 170, 155);
-  padding: 1.5rem;
-  font-size: 22px;
+  padding: 0.5rem;
+  font-size: 18px;
 }
 .info-sobre-mi .sobre-mi .formacion {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
-  margin: 50px;
+  margin: 1rem;
   gap: 1rem;
 }
 .info-sobre-mi .sobre-mi .formacion h2 {
@@ -195,18 +193,21 @@ main {
 }
 .info-sobre-mi .sobre-mi .formacion .estudios p,
 .info-sobre-mi .sobre-mi .formacion .aprendizaje p {
-  margin-right: 80px;
+  font-size: 16px;
 }
 .info-sobre-mi .imagen-sobre-mi {
   display: flex;
   flex: 1;
   justify-content: center;
   align-self: center;
-  height: 700px;
   padding: 1rem;
 }
 .info-sobre-mi .imagen-sobre-mi img {
   border-radius: 2rem;
+  max-width: 100%;
+  max-height: fit-content;
+  width: 45rem;
+  max-width: 100%;
 }
 
 /*PRODUCTOS NESTING */

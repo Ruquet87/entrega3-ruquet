@@ -196,7 +196,6 @@ main {
 .info-sobre-mi {
   display: flex;
   padding: 3rem;
-  flex-wrap: wrap;
 
   .sobre-mi {
     display: flex;
@@ -210,15 +209,15 @@ main {
 
     p {
       color: $color-texto;
-      padding: 1.5rem;
-      font-size: 22px;
+      padding: 0.5rem;
+      font-size: 18px;
     }
 
     .formacion {
       display: flex;
       justify-content: space-between;
-      margin-top: 3rem;
-      margin: 50px;
+
+      margin: 1rem;
       gap: 1rem;
 
       h2 {
@@ -239,7 +238,7 @@ main {
         text-align: left;
 
         p {
-          margin-right: 80px;
+          font-size: 16px;
         }
       }
     }
@@ -250,11 +249,14 @@ main {
     flex: 1;
     justify-content: center;
     align-self: center;
-    height: 700px;
     padding: 1rem;
 
     img {
       border-radius: 2rem;
+      max-width: 100%;
+      max-height: fit-content;
+      width: 45rem;
+      max-width: 100%;
     }
   }
 }
