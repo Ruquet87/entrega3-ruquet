@@ -573,3 +573,29 @@ textarea:focus {
     }
   }
 }
+
+/* Servicios */
+
+@media (max-width: 991px) {
+  #servicios {
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .grilla-servicios {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      padding: 1rem;
+
+      .servicio {
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+}
