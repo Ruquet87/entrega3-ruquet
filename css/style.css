@@ -336,8 +336,6 @@ main {
   display: flex;
   justify-content: center;
   flex: 1;
-  margin: 2rem;
-  padding: 2rem;
   align-items: center;
 }
 
@@ -492,6 +490,31 @@ textarea:focus {
   }
   #servicios .grilla-servicios .servicio img {
     height: auto;
+  }
+}
+/* Contacto */
+@media (max-width: 991px) {
+  #main-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+  #main-contacto .info-contacto {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 0%;
+  }
+  #main-contacto .dato-contacto {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  #main-contacto .formulario-contacto {
+    width: 100%;
+    padding: 1rem;
+  }
+  #main-contacto form {
+    width: 100%;
+    padding: 0.5rem;
   }
 }
 
