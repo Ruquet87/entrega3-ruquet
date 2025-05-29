@@ -209,6 +209,13 @@ main {
   width: 45rem;
   max-width: 100%;
 }
+.info-sobre-mi .imagen-sobre-mi img:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.2);
+}
+.info-sobre-mi .imagen-sobre-mi .contenedor {
+  overflow: hidden;
+}
 
 /*PRODUCTOS NESTING */
 #productos .titulos-productos {
@@ -238,6 +245,13 @@ main {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
+}
+#productos .grilla-productos .producto img:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.1);
+}
+#productos .grilla-productos .producto .contenedor {
+  overflow: hidden;
 }
 #productos .grilla-productos .producto h3 {
   font-size: 1.2rem;
@@ -282,6 +296,13 @@ main {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
+}
+#servicios .grilla-servicios .servicio img:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.1);
+}
+#servicios .grilla-servicios .servicio .contenedor {
+  overflow: hidden;
 }
 #servicios .grilla-servicios .servicio h3 {
   font-size: 1.2rem;
